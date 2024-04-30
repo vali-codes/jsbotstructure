@@ -2,7 +2,7 @@ const { Channel } = require('diagnostics_channel');
 const { Client, Collection, GatewayIntentBits, ActivityType, Events, EmbedBuilder, PermissionsBitField, Embed, StringSelectMenuBuilder } = require('discord.js');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { Permissions, ChannelType } = require('discord.js');
-const shortid = require('shortid');
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
@@ -69,3 +69,19 @@ for (const file of commandFiles) {
     
   });
   
+
+
+
+
+
+
+
+
+
+client.once('ready', () => {
+  console.log('Ready!');
+})
+
+
+
+client.login(process.env.TOKEN);
