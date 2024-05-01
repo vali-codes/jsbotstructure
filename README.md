@@ -21,7 +21,7 @@ To run this project, you will need to add the following environment variables to
 
 `GUILD_ID`
 
-
+`MODLOG_ID`
 ## Support
 
 For support, email help@valentinm.dev with the problem/question you are having.
