@@ -24,5 +24,5 @@ To run this project, you will need to add the following environment variables to
 
 ## Support
 
-For support, email help@valentinm.dev 
+For support, email help@valentinm.dev with the problem you are facing.
 
