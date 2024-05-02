@@ -39,17 +39,12 @@ module.exports = {
         { name: 'Translation', value: translated }
       )
       .setTimestamp()
-  
-      const requiredRole = member.roles.cache.some(role => role.name === 'Admin');
-      if (!requiredRole) {
-        return interaction.reply('You do not have permission to use this command.');
-      }
       try {
         
         interaction.reply({ embeds: [embed]});
         
       } catch (error) {
-        console.error('Error purging channel:', error);
+        console.error('Error translating', error);
         
       }
     },

@@ -31,8 +31,8 @@ module.exports = {
         .setThumbnail(user.displayAvatarURL())
         .setTimestamp();
 
-    
-    interaction.reply({embeds: [userembed]})
+
+    await interaction.reply({embeds: [userembed]})
     
     
 

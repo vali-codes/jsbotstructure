@@ -42,7 +42,7 @@ module.exports = {
 
     const requiredRole = member.roles.cache.some(role => role.name === 'Admin');
     if (!requiredRole) {
-      return interaction.reply({ content: 'You do not have permission to use this command.', ephemeral: true });
+      return interaction.reply({ content: 'You do not have permission to use this command, required Role: Admin', ephemeral: true });
     }
 
     if (user) {
