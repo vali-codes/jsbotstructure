@@ -33,12 +33,6 @@ childProcess.on('close', (code) => {
 });
 
 
-
-
-
-
-
-
 for (const file of commandFiles) {
     try {
       const command = require(`./commands/${file}`);
