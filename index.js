@@ -49,8 +49,7 @@ for (const file of commandFiles) {
   }
   
   
-  
-  
+
   client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
   
@@ -66,15 +65,6 @@ for (const file of commandFiles) {
     }
     
   });
-  
-
-
-
-
-
-
-
-
 
 client.once('ready', () => {
   console.log('Ready!');
