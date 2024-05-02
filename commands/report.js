@@ -6,7 +6,6 @@ module.exports = {
     name: 'report',
     description: 'Report a user for breaking the rules.',
     options: [
-      
       {
         name: 'user',
         description: 'User',
@@ -36,7 +35,7 @@ module.exports = {
 
     
 
-        const embed = new EmbedBuilder()
+        const embed = new EmbedBuilder() 
         .setColor('#ff0000')
         .setTitle('New Report')
         .setDescription("A user has been reported")

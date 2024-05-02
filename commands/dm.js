@@ -29,7 +29,7 @@ module.exports = {
     
     
 
-    const embed = new EmbedBuilder() 
+    const embed = new EmbedBuilder() // embed message with information
       .setColor('#0000ff')
       .setTitle('Message from the Staff')
       .setDescription("Please read the message carefully")
@@ -39,14 +39,14 @@ module.exports = {
       )
       .setTimestamp();
 
-    const requiredRole = member.roles.cache.some(role => role.name === 'Admin');
+    const requiredRole = member.roles.cache.some(role => role.name === 'Admin'); // get the role
     if (!requiredRole) {
       return interaction.reply({ content: 'You do not have permission to use this command.', ephemeral: true });
-    }
+    } // check if user has got the role
 
     if (user) {
       try {
-        await user.send({ embeds: [embed] });
+        await user.send({ embeds: [embed] }); // send the embed to the user
         await interaction.reply({ content: 'Message sent to the user successfully.', ephemeral: true });
       } catch (error) {
         console.error('Failed to send a message to the user:', error);
