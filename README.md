@@ -6,7 +6,7 @@ This Project will give you a basic construct of a Discord Bot, containing:
 - SlashcommandHandler
 - Moderation commands
 - Ticketing System 
-
+- Automod
 
 
 

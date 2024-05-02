@@ -1,7 +1,5 @@
-const { Channel } = require('diagnostics_channel');
-const { Client, Collection, GatewayIntentBits, ActivityType, Events, EmbedBuilder, PermissionsBitField, Embed, StringSelectMenuBuilder } = require('discord.js');
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { Permissions, ChannelType } = require('discord.js');
+
+const { Client, Collection, GatewayIntentBits} = require('discord.js');
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
