@@ -35,13 +35,11 @@ module.exports = {
         { name: 'Message', value: word }
       )
       .setTimestamp()
-
     const requiredRole = member.roles.cache.some(role => role.name === 'Admin');
     if (!requiredRole) {
         return interaction.reply('You do not have permission to use this command. Required role: Admin.');
     }
       try {
-
         interaction.deleteReply();
         channel.send("@everyone")
         channel.send({ embeds: [embed]});
