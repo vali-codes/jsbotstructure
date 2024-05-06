@@ -46,6 +46,8 @@ module.exports = {
         )
         .setTimestamp();
 
+        
+
         if (links !== null) {
             embed.addField('Links', links);
         }
