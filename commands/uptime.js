@@ -6,6 +6,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName('uptime')
     .setDescription('See how long the bot has been running for!'),
+  
   async execute(interaction) {
     const time = process.uptime();
     const uptime = new Date(time * 1000).toISOString().substr(11, 8);

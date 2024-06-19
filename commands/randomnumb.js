@@ -11,7 +11,11 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setColor(0x0099FF)
       .setTitle('Number')
-      .setDescription(String(number))
+      .setDescription("Here is your random number")
+      .addFields(
+        { name: 'Number:', value: number },
+        {name: 'Requested by: ', value: interaction.user.username}
+      )
       .setTimestamp()
     
       

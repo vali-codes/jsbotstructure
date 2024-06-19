@@ -26,7 +26,7 @@ module.exports = {
       .setTitle('Kick')
       .setDescription("You have been kicked from the server!")
       .addFields(
-        { name: 'Staff Member', value: `<@${member.user.id}>` }
+        { name: 'Staff Member: ', value: `<@${member.user.id}>` }
       )
       .setTimestamp();
 
@@ -34,12 +34,8 @@ module.exports = {
     if (!requiredRole) {
       return interaction.reply({ content: 'You do not have permission to use this command, required Role: Admin', ephemeral: true });
     }
-
     if (user) {
       try {
-       
-       
-
         await user.send({ embeds: [embed] });
         const confirmed = new EmbedBuilder() 
           .setColor('#dd6800')
