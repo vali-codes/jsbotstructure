@@ -26,12 +26,14 @@ module.exports = {
         .addFields(
             { name: 'Username', value: user.username },
             { name: 'User ID', value: user.id },
-            { name: 'Account Created', value: String(user.createdAt) },
+          { name: 'Account Created', value: String(user.createdAt) },
+            {name: 'Requested by: ', value: interaction.user.username}
         )
         .setThumbnail(user.displayAvatarURL())
         .setTimestamp();
-
-
+    
+    
+        
     await interaction.reply({embeds: [userembed]})
     
     
