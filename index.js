@@ -1,5 +1,5 @@
 
-const { Client, Collection, GatewayIntentBits} = require('discord.js');
+const { Client, Collection, GatewayIntentBits, Embed} = require('discord.js');
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
@@ -16,7 +16,8 @@ const client = new Client({ intents: [
 client.commands = new Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
+const modlogchannelid = process.env.MODLOG_ID;
+const modlogchannel = client.channels.cache.get(modlogchannelid);
 
 
 const childProcess = spawn('node', ['slashcommandHandler.js']);
@@ -59,6 +60,21 @@ for (const file of commandFiles) {
     }
     
   });
+
+  client.on('guildMemberAdd', async member => {
+    const channel = modlogchannel
+    if (!channel) return; 
+    const welcomeEmbed = new EmbedBuilder()
+      .setColor('#00ff00')
+      .setTitle('Welcome new Member')
+      .setDescription(`Welcome to the server ${member}!`)
+      .addFields(
+      {name: 'Important: ', value: 'Please take a look at our rules and guidelines in the channel for it'},
+    )
+    .setTimestamp();
+    channel.send({ embeds: [welcomeEmbed] });
+  }
+  );
 
 client.once('ready', () => {
   console.log('Ready!');
